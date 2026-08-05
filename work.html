@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Work — Najaf Shehzad</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav>
+    <div class="wrap">
+      <a class="brand" href="index.html">Najaf Shehzad</a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="work.html" class="active">Work</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <div class="wrap">
+      <h1>TrafficSmart — Vehicle Congestion Detection</h1>
+      <div class="accent-line"></div>
+      <p class="muted">A real-time congestion monitoring system, built end-to-end for city governments and everyday commuters.</p>
+
+      <div class="case-block">
+        <h2>The Problem</h2>
+        <p>City roads were overloaded. Commuters couldn't find clear routes to school, work, or home, and the local government had no reliable way to see where congestion was worst and where roads needed expansion. My university flagged this as a real, government-relevant problem worth solving.</p>
+      </div>
+
+      <div class="case-block">
+        <h2>What I Did</h2>
+        <p>I collected and annotated the dataset myself: over 7,000 images shot on my phone from real traffic, labeled in RoboFlow across five vehicle classes (car, bus, truck, motorcycle, other). I trained on YOLOv8, chosen for its speed-accuracy tradeoff based on professors' advice and my own research. Getting usable footage wasn't simple. I had to return to shoot locations multiple times to fix awkward angles and inconsistent quality, since clean, ready-to-use datasets like the ones on Kaggle don't exist in the real world.</p>
+
+        <div class="image-row">
+          <figure>
+            <img src="images/camera-fleet.jpg" alt="TrafficSmart camera fleet dashboard showing 3 active cameras deployed across Rawalpindi.">
+            <figcaption>Real deployment: 3 active cameras across Rawalpindi</figcaption>
+          </figure>
+          <figure>
+            <img src="images/live-monitoring.jpg" alt="Live monitoring grid showing 3 cameras online and streaming.">
+            <figcaption>Live monitoring, cameras online and active</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <div class="case-block">
+        <h2>What Came of It</h2>
+        <p>The model detects vehicles at 80-90% accuracy across all five classes, though about 10% of detections are still misclassified, something I'm actively investigating (most likely class imbalance between bus and truck). Right now it runs on recorded footage, not live camera feeds yet.</p>
+
+        <div class="image-row">
+          <figure>
+            <img src="images/fc01-analytics.png" alt="Route analytics screen for FC-01, Faizabad, showing a real vehicle count: 20 cars, 11 buses, 10 trucks, 40 others.">
+            <figcaption>Real counting output: FC-01, Faizabad route</figcaption>
+          </figure>
+          <figure>
+            <img src="images/ccc01-analytics.jpg" alt="Route analytics screen for CCC-01, Chandni Chowk, showing the full 5-class breakdown including motorcycle.">
+            <figcaption>Full 5-class system confirmed, including Motorcycle</figcaption>
+          </figure>
+        </div>
+
+        <p class="muted">Next iteration: better-planned data collection upfront, earlier annotation quality checks, and testing on live feeds sooner.</p>
+      </div>
+
+      <a class="btn btn-accent" href="mailto:najafshehzad67@gmail.com">Questions about how this was built? Email me</a>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <a href="mailto:najafshehzad67@gmail.com" style="color: inherit;">najafshehzad67@gmail.com</a>
+    </div>
+  </footer>
+</body>
+</html>

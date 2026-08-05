@@ -6,84 +6,42 @@
 <title>Najaf Shehzad — ML Engineer</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
-<style>
-  :root {
-    --bg: #FAFAFA;
-    --text: #1A1A1A;
-    --main: #1E3A5F;
-    --accent: #2E7D8C;
-  }
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  body {
-    background: var(--bg);
-    color: var(--text);
-    font-family: 'Inter', sans-serif;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 24px;
-  }
-  h1 {
-    font-family: 'Space Grotesk', sans-serif;
-    font-weight: 700;
-    font-size: clamp(2rem, 6vw, 3.5rem);
-    color: var(--main);
-    margin-bottom: 12px;
-  }
-  p.tagline {
-    font-size: 1.1rem;
-    color: #5F5E5A;
-    margin-bottom: 28px;
-  }
-  .accent-line {
-    width: 80px;
-    height: 4px;
-    background: var(--accent);
-    margin: 0 auto 28px;
-    border-radius: 2px;
-  }
-  .coming-soon {
-    font-size: 0.95rem;
-    color: #8A8A85;
-    margin-bottom: 28px;
-  }
-  .links {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-  .links a {
-    font-family: 'Inter', sans-serif;
-    font-size: 0.95rem;
-    font-weight: 500;
-    color: var(--main);
-    text-decoration: none;
-    padding: 10px 18px;
-    border: 1.5px solid var(--main);
-    border-radius: 6px;
-    transition: background 0.15s ease, color 0.15s ease;
-  }
-  .links a:hover {
-    background: var(--main);
-    color: #FAFAFA;
-  }
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div>
-    <h1>Najaf Shehzad</h1>
-    <div class="accent-line"></div>
-    <p class="tagline">ML engineer — portfolio launching soon</p>
-    <p class="coming-soon">Work, case studies, and contact coming online this build cycle.</p>
-    <div class="links">
-      <a href="https://www.linkedin.com/in/najaf-shehzad-9b2987233/" target="_blank" rel="noopener">LinkedIn</a>
-      <a href="https://github.com/AL-NAJAF" target="_blank" rel="noopener">GitHub</a>
-      <a href="https://raw.githubusercontent.com/AL-NAJAF/My-CV/master/NajafShehzad67.pdf" target="_blank" rel="noopener">CV</a>
-      <a href="mailto:najafshehzad67@gmail.com">Email</a>
+  <nav>
+    <div class="wrap">
+      <a class="brand" href="index.html">Najaf Shehzad</a>
+      <div class="nav-links">
+        <a href="index.html" class="active">Home</a>
+        <a href="work.html">Work</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
     </div>
-  </div>
+  </nav>
+
+  <main>
+    <div class="wrap hero">
+      <h1>I don't just train models, I build ML systems, like TrafficSmart, that actually run in the real world.</h1>
+      <div class="accent-line"></div>
+      <p class="muted">ML engineer turning real-world congestion into a working, camera-based detection system, built end-to-end, from a self-collected dataset to a live monitoring app.</p>
+      <a class="btn btn-accent" href="work.html">See how it works →</a>
+
+      <img src="images/hero-routes-map.jpg" alt="Real screenshot of the TrafficSmart routes map showing live congestion levels across Islamabad and Rawalpindi, color-coded smooth, moderate, and heavy.">
+
+      <div class="proof-strip">
+        <div><div class="num">7,000+</div><div class="label">self-collected, annotated images</div></div>
+        <div><div class="num">5</div><div class="label">vehicle classes detected</div></div>
+        <div><div class="num">3</div><div class="label">live cameras deployed</div></div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <a href="mailto:najafshehzad67@gmail.com" style="color: inherit;">najafshehzad67@gmail.com</a>
+    </div>
+  </footer>
 </body>
 </html>
