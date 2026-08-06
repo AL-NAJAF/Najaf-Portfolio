@@ -117,14 +117,16 @@ p { margin-bottom: 16px; }
 /* Case study */
 .case-block { margin-bottom: 40px; }
 .case-block img {
+  max-width: 260px;
   width: 100%;
+  display: block;
+  margin: 12px auto;
   border-radius: 10px;
   border: 1px solid #E5E4E0;
-  margin: 12px 0;
 }
-.caption { font-size: 0.85rem; color: var(--muted); font-style: italic; margin-top: -6px; margin-bottom: 20px; }
-.image-row { display: flex; gap: 16px; flex-wrap: wrap; }
-.image-row figure { flex: 1 1 220px; margin: 0; }
+.caption { font-size: 0.85rem; color: var(--muted); font-style: italic; margin-top: -6px; margin-bottom: 20px; text-align: center; }
+.image-row { display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; }
+.image-row figure { flex: 0 1 200px; margin: 0; }
 .image-row img { width: 100%; border-radius: 10px; border: 1px solid #E5E4E0; }
 .image-row figcaption { font-size: 0.8rem; color: var(--muted); margin-top: 6px; text-align: center; }
 
