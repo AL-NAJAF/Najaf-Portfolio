@@ -134,6 +134,7 @@ p { margin-bottom: 16px; }
   height: 160px;
   border-radius: 50%;
   object-fit: cover;
+  object-position: 50% 18%;
   border: 3px solid var(--main);
   margin-bottom: 24px;
 }
