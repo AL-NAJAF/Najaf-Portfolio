@@ -34,31 +34,53 @@
 
       <div class="case-block">
         <h2>What I Did</h2>
-        <p>I built TrafficSmart as a full, branded, working app with two roles: <strong>Admin</strong> and <strong>Citizen</strong>. Admins manage the system, adding cameras, pinning their real-world location, and accessing live monitoring and full analytics for every route. Citizens have a lighter, read-only view: the routes map (color-coded by congestion) and search by camera to see a specific route's analytics. That split keeps day-to-day commuters focused on the one thing they need (where's it congested right now), while giving whoever runs the deployment full control over the camera network.</p>
-        <p>Underneath both roles is the same detection pipeline. I collected and annotated the dataset myself: over 7,000 images shot on my phone from real traffic, labeled in RoboFlow across five vehicle classes (car, bus, truck, motorcycle, other). I trained on YOLOv8, chosen for its speed-accuracy tradeoff based on professors' advice and my own research. Getting usable footage wasn't simple. I had to return to shoot locations multiple times to fix awkward angles and inconsistent quality, since clean, ready-to-use datasets like the ones on Kaggle don't exist in the real world.</p>
+        <p>I built TrafficSmart as a full, branded, working app with two roles: <strong>Admin</strong> and <strong>Citizen</strong>. That split keeps day-to-day commuters focused on the one thing they need (where's it congested right now), while giving whoever runs the deployment full control over the camera network. Underneath both roles is the same detection pipeline: I collected and annotated the dataset myself, over 7,000 images shot on my phone from real traffic, labeled in RoboFlow across five vehicle classes (car, bus, truck, motorcycle, other), and trained on YOLOv8, chosen for its speed-accuracy tradeoff based on professors' advice and my own research. Getting usable footage wasn't simple, I had to return to shoot locations multiple times to fix awkward angles and inconsistent quality, since clean, ready-to-use datasets like the ones on Kaggle don't exist in the real world.</p>
 
         <div class="image-row">
           <figure>
-            <img src="images/trafficsmart-login.jpg" alt="TrafficSmart app login screen, showing Citizen and Admin access levels.">
+            <img class="shot" src="images/trafficsmart-login.jpg" alt="TrafficSmart app login screen, showing Citizen and Admin access levels.">
             <figcaption>Login: choose Citizen or Admin</figcaption>
           </figure>
-          <figure>
-            <img src="images/camera-fleet.jpg" alt="Admin-only camera fleet dashboard showing 3 active cameras deployed across Rawalpindi.">
-            <figcaption>Admin view: manage the camera fleet</figcaption>
-          </figure>
-          <figure>
-            <img src="images/live-monitoring.jpg" alt="Admin-only live monitoring grid showing 3 cameras online and streaming.">
-            <figcaption>Admin view: live monitoring, cameras online</figcaption>
-          </figure>
+        </div>
+
+        <div class="role-block">
+          <h3>Citizen screens</h3>
+          <p class="role-desc">Read-only, built for a commuter checking the road ahead: the color-coded routes map, and search-by-camera to see a specific route's live vehicle counts.</p>
+          <div class="image-row">
+            <figure>
+              <img class="shot" src="images/hero-routes-map.jpg" alt="Citizen routes map, color-coded smooth, moderate, and heavy congestion across Islamabad and Rawalpindi.">
+              <figcaption>Routes map, color-coded by congestion</figcaption>
+            </figure>
+            <figure>
+              <img class="shot" src="images/ccc01-analytics.jpg" alt="Citizen route analytics screen for CCC-01, Chandni Chowk, showing the 5-class vehicle breakdown and hourly traffic volume.">
+              <figcaption>Route analytics for a searched camera</figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <div class="role-block">
+          <h3>Admin screens</h3>
+          <p class="role-desc">Full control for whoever runs the deployment: add and pin new cameras, monitor every feed live, and pull analytics across the whole network.</p>
+          <div class="image-row">
+            <figure>
+              <img class="shot" src="images/camera-fleet.jpg" alt="Admin camera fleet dashboard showing 3 active cameras deployed across Rawalpindi.">
+              <figcaption>Manage the camera fleet</figcaption>
+            </figure>
+            <figure>
+              <img class="shot" src="images/live-monitoring.jpg" alt="Admin live monitoring grid showing 3 cameras online and streaming.">
+              <figcaption>Live monitoring, cameras online</figcaption>
+            </figure>
+            <figure>
+              <img class="shot" src="images/add-camera.jpg" alt="Admin screen for adding a new camera, with name, camera ID, and map pin location.">
+              <figcaption>Add and pin a new camera</figcaption>
+            </figure>
+          </div>
         </div>
       </div>
 
       <div class="case-block">
         <h2>What Came of It</h2>
-        <p>The model detects vehicles at 80-90% accuracy across all five classes, though about 10% of detections are still misclassified, something I'm actively investigating (most likely class imbalance between bus and truck). Right now it runs on recorded footage, not live camera feeds yet, so the next real milestone is deploying the model so it can process a live camera feed directly instead of pre-recorded video.</p>
-
-        <img src="images/ccc01-analytics.jpg" alt="Route analytics screen for CCC-01, Chandni Chowk, showing the full 5-class breakdown (car, bus, truck, motorcycle, others) and an hourly traffic volume chart, viewable by both Citizen and Admin roles.">
-        <p class="caption">Route analytics for CCC-01, Chandni Chowk, viewable by both roles. Counts read zero here since no footage had been uploaded to this route at capture time, the 5-class breakdown and hourly volume chart underneath are real and working.</p>
+        <p>The model detects vehicles at 80-90% accuracy across all five classes, though about 10% of detections are still misclassified, something I'm actively investigating (most likely class imbalance between bus and truck). Right now it runs on recorded footage, not live camera feeds yet, so the next real milestone is deploying the model so it can process a live camera feed directly instead of pre-recorded video. The zero counts visible in the Citizen analytics screenshot above reflect that: no footage had been uploaded to that route at capture time, the 5-class breakdown and hourly volume chart underneath are real and working.</p>
 
         <p class="muted">Next iteration: deploy the model to run on a live feed (not just recorded video), better-planned data collection upfront, and earlier annotation quality checks.</p>
       </div>

@@ -126,8 +126,30 @@ p { margin-bottom: 16px; }
 }
 .caption { font-size: 0.85rem; color: var(--muted); font-style: italic; margin-top: -6px; margin-bottom: 20px; text-align: center; }
 .image-row { display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; }
-.image-row figure { flex: 0 1 200px; margin: 0; }
-.image-row img { width: 100%; border-radius: 10px; border: 1px solid #E5E4E0; }
+.image-row figure { flex: 0 1 180px; margin: 0; }
+.image-row .shot {
+  width: 100%;
+  aspect-ratio: 540 / 1230;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 10px;
+  border: 1px solid #E5E4E0;
+  display: block;
+}
+.role-block {
+  margin: 28px 0;
+  padding: 20px;
+  background: #F2F1EC;
+  border-radius: 12px;
+}
+.role-block h3 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 500;
+  font-size: 1.05rem;
+  color: var(--main);
+  margin-bottom: 6px;
+}
+.role-block p.role-desc { font-size: 0.95rem; margin-bottom: 16px; }
 .image-row figcaption { font-size: 0.8rem; color: var(--muted); margin-top: 6px; text-align: center; }
 
 /* About */
