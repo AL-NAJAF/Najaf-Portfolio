@@ -70,12 +70,6 @@ p { margin-bottom: 16px; }
 
 /* Hero */
 .hero { padding: 56px 0 40px; }
-.hero img {
-  width: 100%;
-  border-radius: 12px;
-  margin-top: 28px;
-  border: 1px solid #E5E4E0;
-}
 .proof-strip {
   display: flex;
   gap: 32px;
